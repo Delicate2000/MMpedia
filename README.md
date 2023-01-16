@@ -154,7 +154,7 @@ bash train_vilt_noise.sh # ViLT+Noise
 
 The parameter "task" and "image_type" are designed to control the task and input image. For example, "--task=pt --image_type=Our" means the model is going to do tail entity prediction and the input information is our collected images
 
-We also provide a detailed Readme for every method here(https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app). 
+We also provide a detailed Readme for every method [here](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app). 
 
 ## License
 
