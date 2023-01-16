@@ -1,5 +1,0 @@
-future
-PySocks
-requests
-selenium
-PyQt5
