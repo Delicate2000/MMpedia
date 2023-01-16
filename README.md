@@ -26,7 +26,7 @@ For example, given a triplet fact (**David_Beckham**, **Spouse**, **Victoria_Bec
 
 ## Download
 
-Here we provide a release version of ImgFact. The full dataset including all the images and the corresponding triplets can be accessed by [GoogleDrive](https://drive.google.com/drive/folders/17MWnf1hQFuOLJ-8iIe0w7Culhy2DJBzE?usp=sharing).
+Here we provide a release version of MMpedia. The full dataset including all the images and the corresponding entities can be accessed by [GoogleDrive](https://drive.google.com/drive/folders/17MWnf1hQFuOLJ-8iIe0w7Culhy2DJBzE?usp=sharing).
 
 The triplets to path map file is [triplet_path_mapping.json](https://github.com/kleinercubs/ImgFact/blob/main/triplet_path_mapping.json).
 
@@ -65,19 +65,22 @@ The ImgFact api supports different image browsing method, you can retrieve image
 
 ## Data Format
 
-Here we describe how ImgFact is stored and organized. The ImgFact dataset is split into 30 subsets and each subset is compressed into a `.zip` file named as `TriplelistXXX.zip` (XXX is the index ranging from 001 to 030) .
+Here we describe how MMpedia is stored and organized. The ImgFact dataset is split into 30 subsets and each subset is compressed into a `.zip` file named as `TriplelistXXX.zip` (XXX is the index ranging from 001 to 030) .
 
 In each subset of ImgFact, The files are organized as follows:
 
-    |-TriplelistXXX
-        |-relation1
-            |-"Entity1 Entity2"
+    |-ServerID
+        |-Entitylist1
+            |-Entity1
                 |-1.jpg
                 |-2.jpg
                 |-3.jpg
                 ...
-        |-relation2
-        |-relation3
+            |-Entity2
+            |-Entity3
+            ...
+        |-Entitylist2
+        |-Entitylist3
         ...
     ...
 
@@ -129,36 +132,29 @@ Note: `XXX` denotes the 3 digit file id, starts with leading zero, e.g. `001`.
 python cluster.py
 ```
 
-## Dataset Evaluation and Application
+## Downstream tasks
 
-All the codes related to the dataset evaluation and application are in [eval_and_app](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app).
+We employ downstream tasks to demonstrate the effectiveness of proposed methods and collected images. All the codes and related dataset evaluation are in [eval_and_app](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app).
 
-The evaluation and application are similar. The only difference is the information the model received.
+For each model, the training strategy is the same and the only difference is the information the model received.
 
 - Generate sub-task datasets by simply run script `generation.sh`.
 - Training and evaluation with different models on different sub-task:
 
-On ViLT:
+Following instructions use BERT-based methods as defalut
 
+You can run the model by following script
 ```
-python vilt.py --dataset {TASK_NAME} --epochs 150 --lr 3e-5 --optimizer ranger
-```
-
-On BERT+ResNet:
-
-```
-python multimodal_naive.py --dataset {TASK_NAME} --epochs 150 --lr 3e-5 --optimizer ranger
-```
-
-Note: If you want to perform the experiments by using only text information, use:
-
-```
-python multimodal_naive.py --dataset {TASK_NAME} --epochs 150 --lr 3e-5 --optimizer ranger --modality text
+bash train_text.sh # BERT
+bash train_our.sh # BERT+ResNet50+Our
+bash train_noise.sh # BERT+ResNet50+Noise
+bash train_vilt_our.sh # ViLT+Our
+bash train_vilt_noise.sh # ViLT+Noise
 ```
 
-Default `TASK_NAME` includes `predict_s/spo`, `predict_s/p`, `predict_s/o`, `predict_s/messy`, `predict_p/spo`, `predict_p/s`, `predict_p/o`, `predict_p/messy`, `predict_o/spo`, `predict_o/s`, `predict_o/p` and `predict_o/messy`. 
+The parameter "task" and "image_type" are designed to control the task and input image. For example, "--task=pt --image_type=Our" means the model is going to do tail entity prediction and the input information is our collected images
 
-The specific task name follows the naming rules: `predict_{predict target}/{known information}`. For examples, `predict_s/spo` means given the images containing all the information of the triplets and want the model to predict the missing head entity. 
+We also provide a detailed Readme for every method here(https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app). 
 
 ## License
 
