@@ -65,10 +65,10 @@ The ImgFact api supports different image browsing method, you can retrieve image
 
 ## Data Format
 
-Here we describe how MMpedia is stored. The MMpedia dataset is split into 30 subsets and each subset is compressed into a `.zip` file. After unziping files under the folder "dbpedia_photo", the data structure are as following:
+Here we describe how MMpedia is stored. The MMpedia dataset is split into 30 subsets and each subset is compressed into a `.zip` file. After unziping files under the folder "MMpedia", the data structure are as following:
 
 ```
-  |-dbpedia_photo
+  |-MMpedia
       |-Entitylist1
           |-Entity1
               |-1.jpg
@@ -85,7 +85,7 @@ Here we describe how MMpedia is stored. The MMpedia dataset is split into 30 sub
 
 "EntitylistX" is used to divide a large number of entities and "EntityX" represents the entity corresponding to the stored images.
 
-For example, the path `dbpedia_photo/Entlist051/Sarik-Gajah/Sarik-Gajah+10.jpg` means the image corresponding to the entity Sarik-Gajah.
+For example, the path `MMpedia/Entlist051/Sarik-Gajah/Sarik-Gajah+10.jpg` means the image corresponding to the entity "Sarik-Gajah".
 
 ## Dataset Construction
 
