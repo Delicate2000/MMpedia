@@ -65,28 +65,25 @@ The ImgFact api supports different image browsing method, you can retrieve image
 
 ## Data Format
 
-Here we describe how MMpedia is stored and organized. The ImgFact dataset is split into 30 subsets and each subset is compressed into a `.zip` file named as `TriplelistXXX.zip` (XXX is the index ranging from 001 to 030) .
+Here we describe how MMpedia is stored. The MMpedia dataset is split into 30 subsets and each subset is compressed into a `.zip` file. After unziping files under the folder "dbpedia_photo", the data structure are as following:
 
-In each subset of ImgFact, The files are organized as follows:
+  |-dbpedia_photo
+      |-Entitylist1
+          |-Entity1
+              |-1.jpg
+              |-2.jpg
+              |-3.jpg
+              ...
+          |-Entity2
+          |-Entity3
+          ...
+      |-Entitylist2
+      |-Entitylist3
+      ...
 
-    |-ServerID
-        |-Entitylist1
-            |-Entity1
-                |-1.jpg
-                |-2.jpg
-                |-3.jpg
-                ...
-            |-Entity2
-            |-Entity3
-            ...
-        |-Entitylist2
-        |-Entitylist3
-        ...
-    ...
+"EntitylistX" is used to divide a large number of entities and "EntityX" represents the entity corresponding to the stored images.
 
-The name of the subdirectories, for example "realation1" or "relation2", in the triplelist root directory indicates the relation of the triplet that the images in it embody, and the name of the second-level subdirectories, like "Entity1 Entity2", is composed of two entity names splitted by a space meaning the two entities of the triplet that the images in it embody.
-
-For example, the image `Triplelist001/relation/head_ent tail_ent/1.jpg` means that the image embodies the triplet `head_ent relation tail_ent` in it.
+For example, the path `dbpedia_photo/Entlist051/Sarik-Gajah/Sarik-Gajah+10.jpg` means the image corresponding to the entity Sarik-Gajah.
 
 ## Dataset Construction
 
