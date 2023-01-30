@@ -137,7 +137,7 @@ We employ downstream tasks to demonstrate the effectiveness of proposed methods 
 
 For each model, the training strategy is the same and the only difference is the information the model received.
 
-To facilitate data download, we additionally package the intersection data of MMpedia and DB15K [here] (https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link). 
+To facilitate data download, we additionally package the intersection data of MMpedia and DB15K [here](https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link). 
 
 Following instructions use BERT-based methods as defalut
 
