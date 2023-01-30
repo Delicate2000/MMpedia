@@ -133,11 +133,11 @@ python cluster.py
 
 ## Downstream tasks
 
-We employ downstream tasks to demonstrate the effectiveness of proposed methods and collected images. All the codes and related dataset evaluation are in [eval_and_app](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app).
-
-For each model, the training strategy is the same and the only difference is the information the model received.
+We employ downstream tasks to demonstrate the effectiveness of proposed methods and collected images. All the codes  are in [eval_and_app](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app).
 
 To facilitate data download, we additionally package the intersection data of MMpedia and DB15K [here](https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link). 
+
+For each model, the training strategy is the same and the only difference is the information the model received.
 
 Following instructions use BERT-based methods as defalut
 
