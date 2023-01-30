@@ -32,34 +32,29 @@ The triplets to path map file is [triplet_path_mapping.json](https://github.com/
 
 The titles of each image can be accessed by [GoogleDrive](https://drive.google.com/drive/u/0/folders/1ovmay5iSAIJcZOtSYEv6-WAeIfFoEmXo), each file contains all the images and triplets under that relationship.
 
-## ImgFact API
+## MMpedia API
 
- Here we provide a easy-to-use API to enable easy access of ImgFact data. Before using the ImgFact api, you should download both the dataset and the `triplet_path_mapping.json` into one directory. You can use the api to explore ImgFact by:
-
-```python
->>> from imgfact_api import ImgFactDataset
->>> dataset = ImgFactDataset(root_dir=".")
->>> data = dataset.load_data()
-```
-
-To list all the relations and entities in ImgFact, use:
+ Here we provide a easy-to-use API to enable easy access of MMpedia data. Before using the MMpedia api, you should download both the dataset and the `triplet_path_mapping.json` into one directory. You can use the api to explore MMpedia by:
 
 ```python
->>> relations = imgfact.load_relations()
->>> entities = imgfact.load_entities()
+>>> from MMpedia_api import MMpediaDataset
+>>> dataset = MMpediaDataset(root_dir=".")
+>>> entity2image = dataset.load_mapping()
 ```
 
-The ImgFact api supports different image browsing method, you can retrieve image by the triplet that it embodies. There are three methods to access images:
+To list all the relations, entities and triplets in MMpedia, use:
+
+```python
+>>> relations = dataset.load_relations()
+>>> entities = dataset.load_entities()
+>>> triplets = dataset.load_triplets()
+```
+
+The MMpedia api supports image retrieval method based on the specified entity:
 
 ```python
 # Retrieve images by entity
->>> imgs = get_entity_img(head_entity="Ent1", tail_entity="Ent2")
-
-# Retrieve images by relation
->>> imgs = get_relation_img(relation="relation1")
-
-# Retrieve images by triplet
->>> imgs = get_triplet_img(triplet="Ent1 relation Ent2")
+>>> imgs = get_entity_img(entity="Ent1", entity2image=entity2image)
 ```
 
 
