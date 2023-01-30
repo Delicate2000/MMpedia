@@ -26,7 +26,7 @@ For example, given a triplet fact (**David_Beckham**, **Spouse**, **Victoria_Bec
 
 ## Download
 
-Here we provide a release version of MMpedia. The full dataset including all the images and the corresponding entities can be accessed by [GoogleDrive](https://drive.google.com/drive/folders/17MWnf1hQFuOLJ-8iIe0w7Culhy2DJBzE?usp=sharing).
+Here we provide a release version of MMpedia. The full dataset including all the images and the corresponding entities can be accessed by [GoogleDrive](https://1drv.ms/u/s!AkpWhRIakQcha_KLXl4oQFzIqjY?e=grm0oi).
 
 The triplets to path map file is [triplet_path_mapping.json](https://github.com/kleinercubs/ImgFact/blob/main/triplet_path_mapping.json).
 
