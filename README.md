@@ -17,10 +17,10 @@ We presented our implementation of MMpedia's construction pipeline and the exper
 
 ## Overview
 
-<img src="imgs/motivation.jpg"/>
+<img src="imgs/pipeline.pdf"/>
 
 
-In ImgFact, we aim at grounding triplet facts in KGs on images to construct a new MMKG, where these images reflect not only head and tail entities, but also their relations.
+In MMpedia, we aim at grounding triplet facts in KGs on images to construct a new MMKG, where these images reflect not only head and tail entities, but also their relations.
 
 For example, given a triplet fact (**David_Beckham**, **Spouse**, **Victoria_Beckha**), we expect to find intimate images of **David_Beckham** and **Victoria_Beckha**.
 
