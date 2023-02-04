@@ -1,4 +1,4 @@
-# Entity information collection
+# Downstream tasks
 
 To facilitate running downstream tasks, we package the intersection of MMpedia and DB15K.
 
