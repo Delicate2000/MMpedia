@@ -54,7 +54,7 @@ The MMpedia api supports image retrieval method based on the specified entity:
 
 ```python
 # Retrieve images by entity
->>> imgs = get_entity_img(entity="Ent1", entity2image=entity2image)
+>>> imgs = get_entity_img(entity="Bart_Tanski", entity2image=entity2image)
 ```
 
 
@@ -80,7 +80,7 @@ Here we describe how MMpedia is stored. The MMpedia dataset is split into 30 sub
 
 "EntitylistX" is used to divide a large number of entities and "EntityX" represents the entity corresponding to the stored images.
 
-For example, the path `MMpedia/Entlist051/Sarik-Gajah/Sarik-Gajah+10.jpg` means the image corresponding to the entity "Sarik-Gajah".
+For example, the path `MMpedia/Entlist141/Bart Tanski/Bart Tanski+1.jpg` means the image corresponding to the entity "Bart Tanski".
 
 ## Dataset Construction
 
@@ -128,7 +128,7 @@ python cluster.py
 
 ## Downstream tasks
 
-We employ downstream tasks to demonstrate the effectiveness of proposed methods and collected images. All the codes  are in [eval_and_app](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app).
+We employ downstream tasks to demonstrate the effectiveness of proposed methods and collected images. All the codes are in [eval_and_app](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app).
 
 To facilitate data download, we additionally package the intersection data of MMpedia and DB15K [here](https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link). 
 
