@@ -20,9 +20,9 @@ We presented our implementation of MMpedia's construction pipeline and the exper
 <img src="imgs/pipeline.jpg"/>
 
 
-In MMpedia, we aim at grounding triplet facts in KGs on images to construct a new MMKG, where these images reflect not only head and tail entities, but also their relations.
+In MMpedia, we aim to construct a new MMKG via grounding entities in KGs on images. For example, given an entity **Acroma_(Band)**, we expect to find images of its members and live performances.
 
-For example, given a triplet fact (**David_Beckham**, **Spouse**, **Victoria_Beckha**), we expect to find intimate images of **David_Beckham** and **Victoria_Beckha**.
+We propose a 4-step pipeline. In step 1, we collect entity information from DBpedia and Google. In step 2, we build a multi-modal classifier to filter non-visual entity node (e.g., "Goal") . In Step 3, we remove images not matching the textual description (e.g., logos of Acroma's Facebook). In Step 4, we further remove images not representing the given entity (e.g., a shirt with "Acroma").
 
 ## Download
 
