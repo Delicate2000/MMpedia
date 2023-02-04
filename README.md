@@ -12,7 +12,7 @@ We presented our implementation of MMpedia's construction pipeline and the exper
   - [MMpedia API](#imgfact-api)
   - [Data Format](#data-format)
   - [Dataset Construction](#dataset-construction)
-  - [Dataset Evaluation and Application](#dataset-evaluation-and-application)
+  - [Downstream Tasks](#dataset-evaluation-and-application)
   - [License](#license)
 
 ## Overview
@@ -28,9 +28,9 @@ For example, given a triplet fact (**David_Beckham**, **Spouse**, **Victoria_Bec
 
 Here we provide a release version of MMpedia. The full dataset including all the images and the corresponding entities can be accessed by [GoogleDrive](https://1drv.ms/u/s!AkpWhRIakQcha_KLXl4oQFzIqjY?e=grm0oi).
 
-The triplets to path map file is [triplet_path_mapping.json](https://github.com/kleinercubs/ImgFact/blob/main/triplet_path_mapping.json).
+The triplets file is `triplet_path_mapping.json`.
 
-The titles of each image can be accessed by [GoogleDrive](https://drive.google.com/drive/u/0/folders/1ovmay5iSAIJcZOtSYEv6-WAeIfFoEmXo), each file contains all the images and triplets under that relationship.
+The 
 
 ## MMpedia API
 
@@ -109,7 +109,7 @@ bash train_vilt_noise.sh # ViLT+Noise
 
 The parameter "task" and "image_type" are designed to control the task and input image. For example, "--task=pt --image_type=Our" means the model is going to do tail entity prediction and the input information is our collected images
 
-We also provide a detailed Readme.md for every method [here](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app). 
+We also provide a detailed Readme.md for every method [here](https://github.com/Delicate2000/MMpedia/tree/main/downstream%20tasks#readme). 
 
 ## License
 
