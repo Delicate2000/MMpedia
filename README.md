@@ -17,7 +17,7 @@ We presented our implementation of MMpedia's construction pipeline and the exper
 
 ## Overview
 
-<img src="imgs/pipeline.pdf"/>
+<img src="imgs/pipeline.jpg"/>
 
 
 In MMpedia, we aim at grounding triplet facts in KGs on images to construct a new MMKG, where these images reflect not only head and tail entities, but also their relations.
