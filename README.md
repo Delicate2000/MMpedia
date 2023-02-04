@@ -5,14 +5,14 @@ We presented our implementation of MMpedia's construction pipeline and the exper
 
 ## Contents
 
-- [MMpedia](#imgfact)
+- [MMpedia](#MMpedia)
   - [Contents](#contents)
   - [Overview](#overview)
   - [Download](#download)
-  - [MMpedia API](#imgfact-api)
+  - [MMpedia API](#MMpedia-API)
   - [Data Format](#data-format)
   - [Dataset Construction](#dataset-construction)
-  - [Downstream Tasks](#dataset-evaluation-and-application)
+  - [Downstream Tasks](#downstream-tasks)
   - [License](#license)
 
 ## Overview
