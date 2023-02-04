@@ -1,4 +1,4 @@
-# Entity-image matching
+# Entity type detection
 
 First, put vgg_flask.py and yolo_flask.py into under the root directory of their source project
 YOLOv5:(https://github.com/ultralytics/yolov5)
