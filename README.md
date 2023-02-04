@@ -34,7 +34,7 @@ The titles of each image can be accessed by [GoogleDrive](https://drive.google.c
 
 ## MMpedia API
 
- Here we provide a easy-to-use API to enable easy access of MMpedia data. Before using the MMpedia api, you should download both the dataset and the `triplet_path_mapping.json` into one directory. You can use the api to explore MMpedia by:
+ Here we provide a easy-to-use API to enable easy access of MMpedia data. Before using the MMpedia api, you should download both the dataset and two json files: `MMpedia_triplets.json` and `entity2image.json` into one directory. You can use the api to explore MMpedia by:
 
 ```python
 >>> from MMpedia_api import MMpediaDataset
@@ -45,16 +45,16 @@ The titles of each image can be accessed by [GoogleDrive](https://drive.google.c
 To list all the relations, entities and triplets in MMpedia, use:
 
 ```python
->>> relations = dataset.load_relations()
->>> entities = dataset.load_entities()
->>> triplets = dataset.load_triplets()
+>>> relations = dataset.load_relations() # [rel1, rel2, ...]
+>>> entities = dataset.load_entities() # [ent1, ent2, ...]
+>>> triplets = dataset.load_triplets() # [[h1, r1, t1], [h2, r2, t2], ...]
 ```
 
 The MMpedia api supports image retrieval method based on the specified entity:
 
 ```python
 # Retrieve images by entity
->>> imgs = get_entity_img(entity="Bart_Tanski", entity2image=entity2image)
+>>> imgs = get_entity_img(entity="Bart_Tanski", entity2image=entity2image) # [img1, img2, ...]
 ```
 
 
@@ -84,47 +84,9 @@ For example, the path `MMpedia/Entlist141/Bart Tanski/Bart Tanski+1.jpg` means t
 
 ## Dataset Construction
 
-All the codes related to the dataset construction pipeline are in [data_construction](https://github.com/kleinercubs/ImgFact/tree/main/dataset_construction). 
-Our implementation of the pipeline can be found here, in which all the steps except image collection is included in this repo. For image collection, we refer to this [AutoCrawler](https://github.com/YoongiKim/AutoCrawler) for reference.
- The construction pipeline should run by the following order:
+All the codes related to the dataset construction pipeline are in [data_construction](https://github.com/Delicate2000/MMpedia/tree/main/dataset_construction). 
 
-- Entity Filtering: Filter entities with a trained classifier.
-
-```
-python inference.py
-```
-
-- Relation Filtering: Run following commands in order and apply pre-defined thresholds to get the result.
-
-```
-python filter_tuples.py
-python gen_sample_tuples.py
-python gen_candidate_relations.py
-python gen_visual_relations.py
-```
-
-- Entity-based Image Filtering: Run following codes respectively and aggregate the results by getting their intersection as the filter result.
-
-```
-python ptuningfilter.py
-python ptuningfilter_ent.py
-```
-
-- Image Collection: Apply any toolbox that can collect images from search engines.
-- Relation-based Image Filtering: Run following codes for training and inference.
-
-```
-python CPgen.py --do_train
-python CPgen.py --do_predict --file {XXX}
-```
-
-Note: `XXX` denotes the 3 digit file id, starts with leading zero, e.g. `001`.
-
-- Clustering: Get the final clustering result.
-
-```
-python cluster.py
-```
+For each step, we provide a detailed Readme.md in the corresponding folder. 
 
 ## Downstream tasks
 
@@ -147,7 +109,7 @@ bash train_vilt_noise.sh # ViLT+Noise
 
 The parameter "task" and "image_type" are designed to control the task and input image. For example, "--task=pt --image_type=Our" means the model is going to do tail entity prediction and the input information is our collected images
 
-We also provide a detailed Readme for every method [here](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app). 
+We also provide a detailed Readme.md for every method [here](https://github.com/kleinercubs/ImgFact/tree/main/eval_and_app). 
 
 ## License
 
