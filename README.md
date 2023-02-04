@@ -96,9 +96,7 @@ To facilitate data download, we additionally package the intersection data of MM
 
 For each model, the training strategy is the same and the only difference is the information the model received.
 
-Following instructions use BERT-based methods as defalut
-
-You can run the model by following script
+Following instructions use BERT-based methods as defalut, you can run the model by scripts:
 ```
 bash train_text.sh # BERT
 bash train_our.sh # BERT+ResNet50+Our
@@ -107,7 +105,7 @@ bash train_vilt_our.sh # ViLT+Our
 bash train_vilt_noise.sh # ViLT+Noise
 ```
 
-The parameter "task" and "image_type" are designed to control the task and input image. For example, "--task=pt --image_type=Our" means the model is going to do tail entity prediction and the input information is our collected images
+The parameter "task" and "image_type" are designed to control the task and input image. For example, "--task=pt --image_type=Our" means the model is going to perform tail entity prediction task and the input information is our collected images.
 
 We also provide a detailed Readme.md for every method [here](https://github.com/Delicate2000/MMpedia/tree/main/downstream%20tasks#readme). 
 
