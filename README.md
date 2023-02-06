@@ -92,7 +92,7 @@ For each step, we provide a detailed Readme.md in the corresponding folder.
 
 We employ downstream tasks to demonstrate the effectiveness of proposed methods and collected images. All the codes are in [downstream tasks](https://github.com/Delicate2000/MMpedia/tree/main/downstream%20tasks).
 
-To facilitate data download, we additionally package the intersection data of MMpedia and DB15K [here](https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link). 
+To facilitate data download, we additionally package the related images [here](https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link). 
 
 For each model, the training strategy is the same and the only difference is the information the model received.
 
