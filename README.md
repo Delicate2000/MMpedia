@@ -60,7 +60,7 @@ The MMpedia api supports image retrieval method based on the specified entity:
 
 ## Data Format
 
-Here we describe how MMpedia is stored. The MMpedia dataset is split into 133 subsets and each subset is compressed into a `.tar` file. After unziping files under the folder "MMpedia", the data structure are as following:
+Here we describe how MMpedia is stored. The MMpedia dataset is split into 132 subsets and each subset is compressed into a `.tar` file. After unziping files under the folder "MMpedia", the data structure are as following:
 
 ```
   |-MMpedia
