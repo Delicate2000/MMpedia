@@ -26,7 +26,7 @@ We propose a 4-step pipeline. In step 1, we collect entity information from DBpe
 
 ## Download
 
-Here we provide a release version of MMpedia. The full dataset including all the images and the corresponding entities can be accessed by [GoogleDrive](https://1drv.ms/u/s!AkpWhRIakQcha_KLXl4oQFzIqjY?e=grm0oi).
+Here we provide a release version of MMpedia. The full dataset including all the images and the corresponding entities can be accessed by [GoogleDrive](https://drive.google.com/drive/folders/13GFHEfKMw9rAR0IvLB46L39UF5fYN9FY?usp=sharing).
 
 The triplets file is `MMpedia_triplets.json`.
 
