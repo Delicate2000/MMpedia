@@ -9,7 +9,7 @@ from subprocess import PIPE, Popen
 import os
 from tqdm import tqdm
 
-def worker(entity_name, type, i,num=10):
+def worker(entity_name, i,num=10):
     entity_name = entity_name.replace(" ","_").replace(':', '').replace('*', '')
     search_keyword = entity_name
 
@@ -39,12 +39,10 @@ def abortable_worker(func, *args, **kwargs):
 if __name__ == "__main__":
     with open("./db_data0309.json","r",encoding='utf-8') as f:
         all_data = json.load(f)
-    with open("./db_data2type0309.json","r",encoding='utf-8') as f:
-            word2type = json.load(f)
 
     pool = multiprocessing.Pool(processes=1,maxtasksperchild=1)
 
-    featureClass = [[all_data[i],word2type[all_data[i]],i] for i in tqdm(range(0,len(all_data),1))] #list of arguments
+    featureClass = [[all_data[i],i] for i in tqdm(range(0,len(all_data),1))] #list of arguments
     for f in featureClass:
         abortable_func = partial(abortable_worker, worker, timeout=300)
         pool.apply_async(abortable_func, args=f,callback=collectMyResult)
