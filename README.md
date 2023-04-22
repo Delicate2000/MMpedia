@@ -28,7 +28,9 @@ We propose a 4-step pipeline. In step 1, we collect entity information from DBpe
 
 Here we provide a release version of MMpedia. The full dataset including all the images and the corresponding entities can be accessed by [GoogleDrive](https://drive.google.com/drive/folders/13GFHEfKMw9rAR0IvLB46L39UF5fYN9FY?usp=sharing).
 
-The triplets file is `MMpedia_triplets.json`.
+The Metadata file is `MMpedia_triples.ttl`.
+
+The preprocessed triples file is `MMpedia_triplets.json`.
 
 The entity to map images file is `entity2image.json`. 
 
@@ -42,12 +44,12 @@ The entity to map images file is `entity2image.json`.
 >>> entity2image = dataset.load_mapping()
 ```
 
-To list all the relations, entities and triplets in MMpedia, use:
+To list all the relations, entities and triples in MMpedia, use:
 
 ```python
 >>> relations = dataset.load_relations() # [rel1, rel2, ...]
 >>> entities = dataset.load_entities() # [ent1, ent2, ...]
->>> triplets = dataset.load_triplets() # [[h1, r1, t1], [h2, r2, t2], ...]
+>>> triples = dataset.load_triplets() # [[h1, r1, t1], [h2, r2, t2], ...]
 ```
 
 The MMpedia api supports image retrieval method based on the specified entity:
