@@ -34,6 +34,9 @@ The preprocessed triples file is `MMpedia_triplets.json`.
 
 The entity to map images file is `entity2image.json`. 
 
+Presistent Url:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7816711.svg)](https://doi.org/10.5281/zenodo.7816711)
+
 ## MMpedia API
 
  Here we provide a easy-to-use API to enable easy access of MMpedia data. Before using the MMpedia api, you should download both the dataset and two json files: `MMpedia_triplets.json` and `entity2image.json` into one directory. You can use the api to explore MMpedia by:
