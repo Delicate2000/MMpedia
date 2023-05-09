@@ -8,7 +8,6 @@ from PIL import Image
 import json
 
 app = flask.Flask(__name__)
-#manager=Manager(app)
 
 clip_model, preprocess = clip.load("ViT-B/32", device="cuda")
 
