@@ -58,7 +58,7 @@ class MMpediaDataset():
 
     def get_entity_img(self, entity = None, entity2image = None) -> list:
         '''
-        Get the images that embody the input entity
+        Get the images that corresponds to the input entity
         '''
 
         if entity is None and entity2image is None:
