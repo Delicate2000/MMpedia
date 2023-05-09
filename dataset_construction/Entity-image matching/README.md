@@ -1,5 +1,5 @@
 # Entity-image matching
-We need multi-process acceleration to perform calculations for many entities. CLIP cannot directly apply package multiprocess (https://github.com/openai/CLIP/issues/130), we deploy it on the framework of gunicorn+flask.
+We need multi-process acceleration to perform calculations for many entities. Since CLIP cannot directly apply package multiprocess (https://github.com/openai/CLIP/issues/130), we deploy it on the framework of gunicorn+flask.
 
 First, run following command to build server
 ```
