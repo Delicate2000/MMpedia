@@ -1,6 +1,6 @@
 # Entity information collection
 
-To facilitate running downstream tasks, we package related images [here](https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link).
+To facilitate running downstream tasks, we package the related images [here](https://drive.google.com/file/d/1pmdtbseQl5hMaqSWGDhER8_eYdqLMXi5/view?usp=share_link).
 
 For BERT-based you can run the model by following script
 ```
