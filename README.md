@@ -13,6 +13,7 @@ We presented our implementation of MMpedia's construction pipeline and the exper
   - [Data Format](#data-format)
   - [Dataset Construction](#dataset-construction)
   - [Downstream Tasks](#downstream-tasks)
+  - [Resource Maintenance Plan](#Resource-Maintenance-Plan)
   - [License](#license)
 
 ## Overview
@@ -113,6 +114,10 @@ bash train_vilt_noise.sh # ViLT+Noise
 The parameter "task" and "image_type" are designed to control the task and input image. For example, "--task=pt --image_type=Our" means the model is going to perform tail entity prediction task and the input information is our collected images.
 
 We also provide a detailed Readme.md for every method [here](https://github.com/Delicate2000/MMpedia/tree/main/downstream%20tasks#readme). 
+
+## Resource-Maintenance-Plan
+
+Our current resource maintenance plan involves updating in accordance with the version updates of DBpedia. In the future, we will expand the scale of MMpedia by providing image resources for more knowledge graphs using the proposed method.
 
 ## License
 
