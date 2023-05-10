@@ -115,7 +115,7 @@ The parameter "task" and "image_type" are designed to control the task and input
 
 We also provide a detailed Readme.md for every method [here](https://github.com/Delicate2000/MMpedia/tree/main/downstream%20tasks#readme). 
 
-## Resource-Maintenance-Plan
+## Resource Maintenance Plan
 
 Our current resource maintenance plan involves updating in accordance with the version updates of DBpedia. In the future, we will expand the scale of MMpedia by providing image resources for more knowledge graphs using the proposed method.
 
