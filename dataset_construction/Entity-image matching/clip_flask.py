@@ -31,7 +31,7 @@ def concat_pictures(entity_name, path):
     return image_list, files
 
 
-# 得到clip 图片与文本匹配分数
+# get the image-text matching score
 def clip_predict(image_list, abstract):
     if len(image_list) == 0:
         return []
