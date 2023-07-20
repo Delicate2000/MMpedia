@@ -57,7 +57,7 @@ class RGMM(nn.Module):
         return torch.sum(x_texts * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
         
     def forward(self, x_images, input_ids, token_type_ids, attention_mask):
-        # attn_mask= ~attention_mask.bool() # mask过了
+        # attn_mask= ~attention_mask.bool()
         # self_attn_mask = ~torch.cat((torch.ones(attention_mask.size()), attention_mask),dim=-1).bool()
 
         x_texts = self.bert(input_ids,token_type_ids,attention_mask)["last_hidden_state"]
@@ -87,7 +87,7 @@ class RGMM(nn.Module):
                 H0 = H1
             else:
                 Z = self.gate(new_X_e)
-                H1 = Z*new_X_e + (1-Z)*H1 # 门控
+                H1 = Z*new_X_e + (1-Z)*H1
         
         H_final = H0 + H1
         H_final = H_final.squeeze(dim=1)
